@@ -24,9 +24,17 @@ const showAll = (rest) => {
   let templatetoshow = ' ';
   for (let i = 0; i < rest.length; i++) {
     templatetoshow += `
-<img class="poster" src = "${rest[i].Poster}"/>
-<p>${rest[i].Title}</p>
-<p>${rest[i].Year}</p>`
+    <div class="col-12 col-sm-6 col-md-4">
+      <div class="wow fadeInUp" data-wow-delay="0.5s">
+      <img src = "${rest[i].Poster}"/>
+      <h6 class="dish-name">Película:${rest[i].Title}</h6>
+      <p>Año:${rest[i].Year}</p>
+      <p>Género: ${rest[i].Genre}</p>
+      <p>Duración: ${rest[i].Runtime}</p>
+      <p>Director: ${rest[i].Director}</p>
+      <p>Actores: ${rest[i].Actors}</p>
+      </div>
+    </div>`
 }
  return templatetoshow;
 };
@@ -40,11 +48,12 @@ search.addEventListener('input',event=>{
   const moviewanted =searchmovie(results,event.target.value.toLowerCase())
   showallcontent.innerHTML= showAll(moviewanted)
 })
+
 countrySelect.addEventListener('change', () => {
-  const filterWeakness = (data, weakness) => {
-    return data.filter(obj => obj.Country.indexOf(weakness) > -1);
+  const filterCountry = (data, country) => {
+    return data.filter(obj => obj.Country.indexOf(country) > -1);
   };
-  const countrywanted = filterWeakness(results, countrySelect.value);
+  const countrywanted = filterCountry(results, countrySelect.value);
   showallcontent.innerHTML = showAll(countrywanted);
 });
 ordeSelection.addEventListener('change', (event) => {
