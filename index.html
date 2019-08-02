@@ -5,12 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link  rel = "stylesheet"  href = " node_modules/slider-pro/dist/css/slider-pro.min.css "/>
+    <link rel="stylesheet" href="style.css" /> 
+
 </head>
 <main>
-    <div id ="show_all_movies"></div>
+    <form name="myform" action="https://www.youtube.com/watch?v=Evit4JKiUVM" method="POST">  <input type="submit" value="Ver Trailer"></form>
+    <form name="myform" action="https://www.youtube.com/watch?v=Evit4JKiUVM" method="POST">  <input type="submit" value="Ver Trailer"></form>
+    <input type="text" id="input_to_search">
+    <select  id="select-order">
+            <option value="0" >Ascendente</option> 
+            <option value="1">Descendente</option> 
+    </select>
+    <select id="country_selection" class="selectors">
+            <option disabled="" selected="">Selccionar país</option>
+            <option value="Mexico">Mexico</option>
+            <option value="Peru">Perú</option>
+            <option value="Dominican Republic">República Dominicana</option>
+            <option value="Chile">Chile</option>
+            <option value="Ecuador">Ecuador</option>
+            <option value="Panama">Panamá</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Venezuela">Venezuela</option>
+
+    </select>
+    <div class="poster" id ="show_all_movies"></div>
+
+ 
 </main>
 <body>
 <script src="data.js"></script>    
-<script src="main.js"></script> 
+<script src="main.js"></script>
+
 </body>
 </html>
