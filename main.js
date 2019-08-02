@@ -5,17 +5,17 @@ const countrySelect= document.getElementById('country_selection')
 const ordeSelection= document.getElementById('select-order')
 
   const urls = [
-    'http://www.omdbapi.com/?t=roma&apikey=69c2fdfb',
-    'http://www.omdbapi.com/?t=retablo&apikey=69c2fdfb',
-    'http://www.omdbapi.com/?t=Pantale%C3%B3n%20y%20las%20visitadoras&apikey=6d654b44',
-    'http://www.omdbapi.com/?t=machuca&apikey=69c2fdfb',
-    'http://www.omdbapi.com/?t=no&apikey=69c2fdfb',
-    'http://www.omdbapi.com/?t=y%20tu%20mam%C3%A1%20tambien&apikey=69c2fdfb',
-    'http://www.omdbapi.com/?t=Viaje%20a%20Tombuct%C3%BA&apikey=6d654b44',
-    'http://www.omdbapi.com/?t=caidos%20del%20cielo&apikey=69c2fdfb',
-    'http://www.omdbapi.com/?i=tt0112340&apikey=69c2fdfb',
-    'http://www.omdbapi.com/?i=tt0410316&apikey=69c2fdfb',
-    'http://www.omdbapi.com/?i=tt1830761&apikey=69c2fdfb'
+    'https://www.omdbapi.com/?t=roma&apikey=69c2fdfb',
+    'https://www.omdbapi.com/?t=retablo&apikey=69c2fdfb',
+    'https://www.omdbapi.com/?t=Pantale%C3%B3n%20y%20las%20visitadoras&apikey=6d654b44',
+    'https://www.omdbapi.com/?t=machuca&apikey=69c2fdfb',
+    'https://www.omdbapi.com/?t=no&apikey=69c2fdfb',
+    'https://www.omdbapi.com/?t=y%20tu%20mam%C3%A1%20tambien&apikey=69c2fdfb',
+    'https://www.omdbapi.com/?t=Viaje%20a%20Tombuct%C3%BA&apikey=6d654b44',
+    'https://www.omdbapi.com/?t=caidos%20del%20cielo&apikey=69c2fdfb',
+    'https://www.omdbapi.com/?i=tt0112340&apikey=69c2fdfb',
+    'https://www.omdbapi.com/?i=tt0410316&apikey=69c2fdfb',
+    'https://www.omdbapi.com/?i=tt1830761&apikey=69c2fdfb'
   ]
   const all = urls.map(url => fetch(url).then(response => response.json()));
 Promise.all(all).then (results=>{
