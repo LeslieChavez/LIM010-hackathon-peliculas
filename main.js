@@ -39,9 +39,10 @@ const showAll = (rest) => {
  return templatetoshow;
 };
 showallcontent.innerHTML = showAll(results); 
+
 console.log(results)      
            
-search.addEventListener('input',event=>{
+search.addEventListener('input',(event)=>{
   const searchmovie =(data, wanted)=>{
     return data.filter(obj=>obj.Title.toLowerCase().startsWith(wanted))
   }
